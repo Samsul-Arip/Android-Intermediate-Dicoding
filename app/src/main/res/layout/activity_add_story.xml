@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddStoryActivity">
+
+    <ImageView
+        android:id="@+id/img_preview_photo"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:src="@drawable/ic_baseline_image_24"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_goneMarginStart="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/image_add_photo"/>
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:textAllCaps="false"
+        android:text="@string/camera"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/btn_gallery"
+        app:layout_constraintStart_toStartOf="@+id/img_preview_photo"
+        app:layout_constraintTop_toBottomOf="@+id/img_preview_photo"
+        />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_button"
+        android:text="@string/gallery"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_camera"
+        app:layout_constraintEnd_toEndOf="@+id/img_preview_photo"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera"
+        app:layout_constraintTop_toTopOf="@+id/btn_camera" />
+
+    <EditText
+        android:id="@+id/edt_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/bg_edittext"
+        android:gravity="start"
+        android:hint="@string/hint_description"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:padding="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/title_share_location"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+        app:layout_constraintStart_toStartOf="@+id/btn_camera"
+        app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
+
+    <TextView
+        android:id="@+id/title_share_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share_location"
+        android:textSize="16sp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_upload"
+        app:layout_constraintStart_toStartOf="@id/edt_description"
+        />
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/title_share_location"
+        app:layout_constraintEnd_toEndOf="@id/edt_description"
+        app:layout_constraintBottom_toBottomOf="@id/title_share_location"
+        />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/upload"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edt_description"
+        app:layout_constraintStart_toStartOf="@+id/edt_description" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_upload"
+        app:layout_constraintEnd_toEndOf="@+id/btn_upload"
+        app:layout_constraintStart_toStartOf="@+id/btn_upload"
+        app:layout_constraintTop_toTopOf="@+id/btn_upload" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+A. Success
+    1. Recyclerview akan tampil ketika sukses mengambil data dari API
+    2. Memastikan toolbar aktif
+    2. Memastikan response name sesuai
+    2. Memastikan keterangan tv_not_found atau tv_error tidak tampil ketika data berhasil diambil
+B. Empety Or Error
+    1. Memastikan tv_not_found atau tv_error tampil ketika data yang diambil dari api kosong

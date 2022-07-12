@@ -1,0 +1,37 @@
+A. Test Home ViewModel
+    1. Menyimpan data token
+    2. Memastikan method getStories dapat dipanggil
+    3. Memastikan data story tidak null
+    4. Memastikan kesamaan data asli dengan data dummy
+
+B. Test LoginAndRegister ViewModel
+-Success
+    1. Memastikan login & register success ketika melakukan aksi
+    2. Memastikan data tidak null
+    3. Memastikan kesamaan response antara data dummy dengan yang asli
+    4. Memastikan method login & register dapat dipanggil
+-Error
+    1. Memastikan login & register gagal ketika melakukan aksi
+    2. Memastika data null ketika gagal
+    3. Memastikan Method login & register dapat dipanggil
+
+C. Test MapsViewModel
+-Success
+    1. Memastikan data sucess ketika dipanggil
+    2. Memastikan data tidak null
+    3. Memastikan kesamaan data response antara data dummy dengan yang asli
+    4. Memastikan method getStories dapat dipanggil
+-Error
+    1. Memastikan data gagal diambil ketika melakukan aksi
+    2. Memastika data null ketika gagal
+    3. Memastikan Method getstories dapat dipanggil
+
+D. Test UploadStoryViewModel
+-Success
+    1. Memastikan dapat berhasil ketika upload file
+    2. Memastikan data tidak null
+    3. Memastikan kesamaan data response antara data dummy dengan yang asli
+    4. Memastikan method uploadStory datap dipanggil
+-Error
+    1. Memastikan gagal upload file
+    2. Memastikan data response tidak sama dengan server asli

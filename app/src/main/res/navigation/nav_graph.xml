@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.samsul.storyapp.ui.fragment.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story" >
+        <action
+            android:id="@+id/action_storyFragment_to_mapsFragment"
+            app:destination="@id/maps" />
+        <action
+            android:id="@+id/action_storyFragment_to_settingsFragment"
+            app:destination="@id/settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/maps"
+        android:name="com.samsul.storyapp.ui.fragment.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_storyFragment"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_mapsFragment_to_settingsFragment"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.samsul.storyapp.ui.fragment.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mapsFragment"
+            app:destination="@id/maps" />
+        <action
+            android:id="@+id/action_settingsFragment_to_storyFragment"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>
