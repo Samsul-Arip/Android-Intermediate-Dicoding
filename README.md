@@ -18,8 +18,8 @@
 
 
 #### Review Rating Submission 1
-:star::star::star::star:
+:star::star::star::star:star:
 
 
 #### Review Rating Submission 2
-:star::star::star::star:
+:star::star::star::star:star:
